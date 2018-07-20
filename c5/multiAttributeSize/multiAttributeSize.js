@@ -23,30 +23,30 @@ function main() {
 }
 
 //创建2个缓存区,然后依次绑定数据
-function initVertexBuffers(gl) {
-    var vertices = new Float32Array([
-        0.0, 0.5, -0.5, -0.5, 0.5, -0.5
-    ]);
-    var n = 3;
-    var sizes = new Float32Array([
-        10.0, 20.0, 30.0
-    ]);
-    var vertexBuffer = gl.createBuffer();
-    var sizeBuffer = gl.createBuffer();
+// function initVertexBuffers(gl) {
+//     var vertices = new Float32Array([
+//         0.0, 0.5, -0.5, -0.5, 0.5, -0.5
+//     ]);
+//     var n = 3;
+//     var sizes = new Float32Array([
+//         10.0, 20.0, 30.0
+//     ]);
+//     var vertexBuffer = gl.createBuffer();
+//     var sizeBuffer = gl.createBuffer();
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
-    var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
-    gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
-    gl.enableVertexAttribArray(a_Position);
+//     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+//     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+//     var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+//     gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
+//     gl.enableVertexAttribArray(a_Position);
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
-    var a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
-    gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, 0, 0);
-    gl.enableVertexAttribArray(a_PointSize);
-    return n;
-}
+//     gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
+//     gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
+//     var a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
+//     gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, 0, 0);
+//     gl.enableVertexAttribArray(a_PointSize);
+//     return n;
+// }
 
 //只创建一个缓存区,分别从这一个区里面取得需要的数据
 
